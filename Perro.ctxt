@@ -1,0 +1,8 @@
+#BlueJ class context
+#Wed Sep 09 17:52:09 CST 2026
+comment0.target=Perro
+comment1.params=nombre edad raza
+comment1.target=Perro(java.lang.String, int, java.lang.String)
+comment2.target=java.lang.String getRaza()
+comment3.target=java.lang.String toString()
+numComments=4

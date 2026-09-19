@@ -1,0 +1,8 @@
+#BlueJ class context
+#Wed Sep 09 17:54:10 CST 2026
+comment0.target=Veterinaria
+comment1.target=Veterinaria()
+comment2.params=cliente
+comment2.target=void registrarCliente(Cliente)
+comment3.target=void mostrarClientes()
+numComments=4

@@ -1,0 +1,89 @@
+@startuml
+
+title Diagrama de clases - Clínica veterinaria
+
+class Animal {
+  - nombre : String
+  - edad : int
+  - peso : double
+  - especie : String
+  - numeroChip : String
+  --
+  + registrarAnimal()
+  + consultarInformacion()
+  + actualizarAnimal()
+}
+
+class Perro {
+  - raza : String
+  - tamano : String
+  - vacunado : boolean
+  --
+  + consultarDatosPerro()
+}
+
+class Gato {
+  - raza : String
+  - tipoPelo : String
+  - esterilizado : boolean
+  --
+  + consultarDatosGato()
+}
+
+class Ave {
+  - tipoAve : String
+  - colorPlumas : String
+  - anillada : boolean
+  --
+  + consultarDatosAve()
+}
+
+class Conejo {
+  - raza : String
+  - colorPelo : String
+  - vacunado : boolean
+  --
+  + consultarDatosConejo()
+}
+
+class Propietario {
+  - nombreApellidos : String
+  - dni : String
+  - telefonoContacto : String
+  - correoElectronico : String
+  - direccion : String
+  --
+  + registrarPropietario()
+  + consultarDatos()
+  + actualizarDatos()
+}
+
+class VisitaVeterinaria {
+  - fecha : String
+  - motivoConsulta : String
+  - diagnostico : String
+  - tratamientoAplicado : String
+  --
+  + registrarVisita()
+  + consultarVisita()
+  + actualizarVisita()
+}
+
+class Veterinario {
+  - nombreApellidos : String
+  - numeroColegiado : String
+  - especialidad : String
+  --
+  + registrarVeterinario()
+  + atenderVisita()
+  + consultarDatos()
+}
+
+Animal <|-- Perro
+Animal <|-- Gato
+Animal <|-- Ave
+Animal <|-- Conejo
+
+Propietario "1" -- "0..*" Animal
+Animal "1" *-- "0..*" VisitaVeterinaria
+Veterinario "1" -- "0..*" VisitaVeterinaria
